@@ -1,0 +1,265 @@
+
+ /* Base navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px; 
+    position: fixed; /* Ensure the navbar is fixed */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: calc(100% - 0px); /* Full width minus margins */
+    background-color: #dfdfdf; /* Background color 1f0016*/
+    color: white;
+    z-index: 2; /* Make sure it's above other content */
+    padding-top:10px ;
+    padding-bottom: 10px;
+    height :80px;
+
+} 
+
+/* Image control styles */
+.imgcontrol {
+    width: 20%; 
+    height: 150px; 
+    max-width: 10rem; 
+    float: left; /* Aligns the image to the left */
+    margin-left: 10px;
+}
+
+/* Navigation menu styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+/* Connect button styles */
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, rgb(33, 33, 33) 0.36%, #141414 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    color:#ffffff;
+    text-shadow: #1d1d1d;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Adjust shadow for 3D effect */
+    font-weight: bold; /* Make text bold */
+    margin-right: 20px;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+/* Menu item styles */
+.nav-menu li {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+
+/* Navbar.css */
+
+/* Reset margin and padding */
+body, ul {
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-menu a:hover {
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+/* Toggle button for mobile view */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+
+.nav-mob-open{
+    display: none;
+}
+
+.nav-mob-close{
+    display: none;
+}
+
+
+
+/* Mobile-specific styles for larger screens */
+@media(max-width: 1300px) {
+    .navbar {
+/*         padding: 20px;
+          background-color: #dfdfdfe1; */
+ 
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .imgcontrol {
+        width: 70%; 
+        max-width: 15rem; 
+        max-height: 100vh; 
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1d1d1d;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px; /* Initially hidden off-screen */
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+    }
+
+    .nav-menu li {
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Mobile-specific styles for smaller screens */
+@media(max-width: 768px) {
+    .navbar {
+        padding-right: 50px;
+        position: fixed;
+        width: calc(100% - 40px); /* Full width minus margins */
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .imgcontrol {
+        width: 70%; 
+        max-width: 15rem; 
+        max-height: 100vh; 
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 140px;
+        width: 30px;
+        padding-bottom: 30px;
+        
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1d1d1d;
+        border-radius: 10px;
+        width: 200px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px; /* Initially hidden off-screen */
+    }
+
+    .nav-menu li {
+        font-size: 30px;
+        padding-left: 30px;
+        flex-direction: row;
+        gap: 0px;
+    }
+
+    
+}
